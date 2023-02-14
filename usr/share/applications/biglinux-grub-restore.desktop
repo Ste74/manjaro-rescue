@@ -33,6 +33,6 @@ Categories=System;
 StartupNotify=true
 Terminal=false
 Type=Application
-X-KDE-ServiceTypes=KCModule
-Type=Service
-
+#X-KDE-ServiceTypes=KCModule
+StartupNotify=true
+X-AppStream-Ignore=true
