@@ -1,6 +1,6 @@
 [Desktop Entry]
-Exec=biglinux-grub-restore
-Icon=/usr/share/biglinux/grub-restore/grub-icon.svg
+Exec=manjaro-grub-restore
+Icon=/usr/share/manjaro/grub-restore/grub-icon.svg
 Name=Restore installed system settings
 Name[bg]=Възстановяване на инсталираните системни настройки
 Name[cs]=Obnovení nastavení nainstalovaného systému
