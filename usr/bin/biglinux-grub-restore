@@ -208,7 +208,7 @@ Se o problema persistir tente as outras opções." \
     
         else
             #restore
-            pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY KDE_SESSION_VERSION=5 KDE_FULL_SESSION=true konsole -e /usr/share/biglinux/grub-restore/grub-apply-legacy
+            sudo st -e /usr/share/biglinux/grub-restore/grub-apply-legacy
             zenity --info --text $"Concluído!" --window-icon=/usr/share/biglinux/grub-restore/grub-icon.svg 
         fi
     fi
@@ -268,7 +268,7 @@ Se o problema persistir tente as outras opções." \
     
         else
             #restore
-            pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY KDE_SESSION_VERSION=5 KDE_FULL_SESSION=true konsole -e /usr/share/biglinux/grub-restore/grub-apply-efi
+            sudo st -e /usr/share/biglinux/grub-restore/grub-apply-efi
             zenity --info --text $"Concluído!" --window-icon=/usr/share/biglinux/grub-restore/grub-icon.svg 
         fi
     fi
