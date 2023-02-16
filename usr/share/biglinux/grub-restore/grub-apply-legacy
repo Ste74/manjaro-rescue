@@ -64,7 +64,7 @@ fi
 
 if [ "$(cat /tmp/grub-restore-apply-mode)" = "5" ];
 then
-    manjaro-chroot /mnt bigcontrolcenter
+    manjaro-chroot /mnt bmenu
 fi
 
 if [ "$(cat /tmp/grub-restore-apply-mode)" = "6" ];
