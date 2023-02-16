@@ -5,9 +5,9 @@ pkgver=$(date +%y.%m.%d)
 pkgrel=$(date +%H%M)
 arch=('any')
 license=('GPL')
-url="https://github.com/biglinux/biglinux-grub-restore"
+url="https://gitlab.manjaro.org/ste74/manjaro-grub-restore"
 pkgdesc="Restore your installed system"
-depends=('zenity' 'mkinitcpio' 'grub' 'os-prober' 'pamac-cli' 'pacman' 'util-linux' 'manjaro-tools-base' 'st-manjaro')
+depends=('zenity' 'mkinitcpio' 'grub' 'os-prober' 'pamac-cli' 'pacman' 'util-linux' 'manjaro-tools-base' 'st-manjaro' 'bmenu')
 makedepends=('git')
 source=("git+https://gitlab.manjaro.org/ste74/manjaro-grub-restore.git")
 md5sums=(SKIP)
@@ -15,9 +15,9 @@ md5sums=(SKIP)
 package() {
 		cp -rf $srcdir/$pkgname/usr $pkgdir/
 		
-		chmod 755 $pkgdir/usr/bin/biglinux-grub-restore
-		chmod 755 $pkgdir/usr/share/biglinux/grub-restore/grub-apply-efi
-		chmod 755 $pkgdir/usr/share/biglinux/grub-restore/grub-apply-legacy
-		chmod 755 $pkgdir/usr/share/biglinux/grub-restore/grub-restore
+		chmod 755 $pkgdir/usr/bin/manjaro-grub-restore
+		chmod 755 $pkgdir/usr/share/manjaro/grub-restore/grub-apply-efi
+		chmod 755 $pkgdir/usr/share/manjaro/grub-restore/grub-apply-legacy
+		chmod 755 $pkgdir/usr/share/manjaro/grub-restore/grub-restore
 }
 
