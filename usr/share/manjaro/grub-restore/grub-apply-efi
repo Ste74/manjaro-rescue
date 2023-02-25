@@ -8,7 +8,7 @@
 
 #Translation
 export TEXTDOMAINDIR="/usr/share/locale"
-export TEXTDOMAIN=biglinux-grub-restore
+export TEXTDOMAIN=manjaro-rescue
 
 
 EFI_PARTITION="$(cat /tmp/efi-selected)"
@@ -35,14 +35,14 @@ mount "$EFI_PARTITION" /mnt/boot/efi
 
 if [ "$(cat /tmp/grub-restore-apply-mode)" = "1" ];
 then
-    manjaro-chroot /mnt grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=biglinux --recheck
+    manjaro-chroot /mnt grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=manjaro --recheck
 fi
 
 if [ "$(cat /tmp/grub-restore-apply-mode)" = "2" ];
 then
     manjaro-chroot /mnt rm /var/lib/pacman/db.lck
     manjaro-chroot /mnt pacman --noconfirm -Sy grub
-    manjaro-chroot /mnt grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=biglinux --recheck
+    manjaro-chroot /mnt grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=manjaro --recheck
     manjaro-chroot /mnt mkinitcpio -P
     manjaro-chroot /mnt grub-mkconfig -o /boot/grub/grub.cfg
 fi
@@ -55,7 +55,7 @@ then
     manjaro-chroot /mnt pamac install linux grub --no-confirm
     manjaro-chroot /mnt pacman --noconfirm -Syyuu grub
     manjaro-chroot /mnt pacman --noconfirm -Syyuu linux
-    manjaro-chroot /mnt grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=biglinux --recheck
+    manjaro-chroot /mnt grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=manjaro --recheck
     manjaro-chroot /mnt mkinitcpio -P
     manjaro-chroot /mnt grub-mkconfig -o /boot/grub/grub.cfg
 fi
@@ -71,6 +71,11 @@ then
 fi
 
 if [ "$(cat /tmp/grub-restore-apply-mode)" = "6" ];
+then
+    manjaro-chroot /mnt mlh
+fi
+
+if [ "$(cat /tmp/grub-restore-apply-mode)" = "7" ];
 then
     manjaro-chroot /mnt rm /var/lib/pacman/db.lck
     manjaro-chroot /mnt pamac-manager

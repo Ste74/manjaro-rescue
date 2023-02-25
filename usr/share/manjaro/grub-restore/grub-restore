@@ -8,7 +8,7 @@
 
 # Translation
 export TEXTDOMAINDIR="/usr/share/locale"
-export TEXTDOMAIN=biglinux-grub-restore
+export TEXTDOMAIN=manjaro-rescue
 
 # Search partitions btrfs ext xfs and vfat
 for i in $(blkid | grep -e 'TYPE="btrfs"' -e 'TYPE="ext."' -e 'TYPE="xfs"' -e 'TYPE="vfat"' | cut -f1 -d:)
