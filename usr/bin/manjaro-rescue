@@ -17,7 +17,7 @@ export TEXTDOMAIN=manjaro-rescue
 # only in live mode
 if [ ! -e /livefs-pkgs.txt ] ;
 then
-    zenity --warning --text $"This utility should only be used in live mode!"  --window-icon=/usr/share/biglinux/grub-restore/grub-icon.svg 
+    zenity --warning --text $"This utility should only be used in live mode!"  --window-icon=/usr/share/manjaro/grub-restore/grub-icon.svg 
     exit
 fi
 
@@ -33,7 +33,7 @@ installed on HD or SSD.</span>
 better not to continue the use of this tool.</span>
 <span font='10' foreground='gray'>Probably also work with other Linux distributions.</span>
 
-Do you want to proceed?" --width=300 --height=100 --title=$"Restore Boot, Grub and Initrd" --window-icon=/usr/share/biglinux/grub-restore/grub-icon.svg --icon-name='system-run' --no-wrap
+Do you want to proceed?" --width=300 --height=100 --title=$"Restore Boot, Grub and Initrd" --window-icon=/usr/share/manjaro/grub-restore/grub-icon.svg --icon-name='system-run' --no-wrap
 
 if [ "$?" = "1" ];
 then
@@ -41,13 +41,13 @@ then
 fi
 
 # Load info from system
-sudo /usr/share/biglinux/grub-restore/grub-restore | zenity --progress --pulsate --no-cancel --auto-close --text $"Wait..."
+sudo /usr/share/manjaro/grub-restore/grub-restore | zenity --progress --pulsate --no-cancel --auto-close --text $"Wait..."
 
 # No Linux detected
 if [ "$(wc -l < /tmp/os-prober)" = "0" ];
 then
 zenity --error --title=$"Restore Boot, Grub and Initrd" --text $"I didn't find any Linux installed on this computer, canceled process.
-"  --width=200 --height=25 --window-icon=/usr/share/biglinux/grub-restore/grub-icon.svg
+"  --width=200 --height=25 --window-icon=/usr/share/manjaro/grub-restore/grub-icon.svg
 exit
 fi
 
@@ -68,7 +68,7 @@ probably GRUB restoration will not work.
 
 Try to restart and through the computer BIOS make the boot in Legacy or BIOS mode.
 
-Do you want to try even with little likely to work?" --width=300 --height=100 --title=$"Restore Boot, Grub and Initrd" --window-icon=/usr/share/biglinux/grub-restore/grub-icon.svg --icon-name='drive-harddisk' --no-wrap
+Do you want to try even with little likely to work?" --width=300 --height=100 --title=$"Restore Boot, Grub and Initrd" --window-icon=/usr/share/manjaro/grub-restore/grub-icon.svg --icon-name='drive-harddisk' --no-wrap
     if [ "$?" = "1" ];
     then
         exit
@@ -88,7 +88,7 @@ probably GRUB restoration will not work.
 
 Try to restart and through the computer BIOS make the boot in EFI mode.
 
-Do you want to try even with little likely to work?" --width=300 --height=100 --title=$"Restore Boot, Grub and Initrd" --window-icon=/usr/share/biglinux/grub-restore/grub-icon.svg --icon-name='drive-harddisk' --no-wrap
+Do you want to try even with little likely to work?" --width=300 --height=100 --title=$"Restore Boot, Grub and Initrd" --window-icon=/usr/share/manjaro/grub-restore/grub-icon.svg --icon-name='drive-harddisk' --no-wrap
     if [ "$?" = "1" ];
     then
         exit
@@ -109,7 +109,7 @@ PARTITION=EFI
     if [ "$(wc -l < /tmp/efi-partitions)" -gt "1" ];
     then
 
-zenity --list --title=$"Restore Boot, Grub and Initrd" --width=790 --height=337 --window-icon=/usr/share/biglinux/grub-restore/grub-icon.svg --text $"<span font='16' foreground='LightSkyBlue'>Select an option:</span>
+zenity --list --title=$"Restore Boot, Grub and Initrd" --width=790 --height=337 --window-icon=/usr/share/manjaro/grub-restore/grub-icon.svg --text $"<span font='16' foreground='LightSkyBlue'>Select an option:</span>
 
 I found more than one EFI partition, select which one should use:" --hide-header --column="" < /tmp/efi-partitions > /tmp/efi-selected
 
@@ -127,7 +127,7 @@ fi
 rm -f /tmp/os-prober-selected
 if [ "$(wc -l < /tmp/os-prober)" -gt "1" ];
 then
-zenity --list --title=$"Restore Boot, Grub and Initrd" --width=790 --height=337 --window-icon=/usr/share/biglinux/grub-restore/grub-icon.svg  --text $"<span font='16' foreground='LightSkyBlue'>Select an option:</span>
+zenity --list --title=$"Restore Boot, Grub and Initrd" --width=790 --height=337 --window-icon=/usr/share/manjaro/grub-restore/grub-icon.svg  --text $"<span font='16' foreground='LightSkyBlue'>Select an option:</span>
 
 I found more than one Linux installed on this computer, select which one should restore the boot:" --hide-header --column="" < /tmp/os-prober > /tmp/os-prober-selected
         if [ "$(cat /tmp/os-prober-selected)" = "" ];
@@ -146,7 +146,7 @@ then
     if [ "$(wc -l < /tmp/grub-disks)" -gt "1" ];
     then
     
-    zenity --list --title=$"Restore Boot, Grub and Initrd" --width=790 --height=337 --window-icon=/usr/share/biglinux/grub-restore/grub-icon.svg --text $"<span font='16' foreground='LightSkyBlue'>Select an option:</span>
+    zenity --list --title=$"Restore Boot, Grub and Initrd" --width=790 --height=337 --window-icon=/usr/share/manjaro/grub-restore/grub-icon.svg --text $"<span font='16' foreground='LightSkyBlue'>Select an option:</span>
     
 I found more than one storage device, select which one should record the boot:" --column=$"Disk" --column=$"Size" --column=$"Name" --column=$"Partition table" $(cat /tmp/grub-disks) > /tmp/grub-disks-selected
     else
@@ -177,7 +177,7 @@ I found more than one storage device, select which one should record the boot:" 
 <span font='11' foreground='gray'>Partition format:</span> $PARTITION_FORMAT
 <span font='11' foreground='gray'>Partition UUID:</span> $UUID_PARTITION
 
-Do you want to proceed?" --width=300 --height=100 --title=$"Restore Boot, Grub and Initrd"  --window-icon=/usr/share/biglinux/grub-restore/grub-icon.svg --icon-name='drive-harddisk' --no-wrap
+Do you want to proceed?" --width=300 --height=100 --title=$"Restore Boot, Grub and Initrd"  --window-icon=/usr/share/manjaro/grub-restore/grub-icon.svg --icon-name='drive-harddisk' --no-wrap
 
     if [ "$?" = "1" ];
     then
@@ -185,10 +185,10 @@ Do you want to proceed?" --width=300 --height=100 --title=$"Restore Boot, Grub a
     else
         net=$(ping -c 1 8.8.8.8 | cut -d " " -f 1 | grep 64)
         if [ "$net" != "64" ]; then
-            zenity --info --text $"Your computer is not connected to the internet, options 2 and 3 need internet to work." --width=300 --height=25 --icon-name='network-offline' --window-icon=/usr/share/biglinux/grub-restore/grub-icon.svg
+            zenity --info --text $"Your computer is not connected to the internet, options 2 and 3 need internet to work." --width=300 --height=25 --icon-name='network-offline' --window-icon=/usr/share/manjaro/grub-restore/grub-icon.svg
         fi
         rm -f /tmp/grub-restore-apply-mode
-        zenity --list --title=$"Restore Boot, Grub and Initrd" --width=790 --height=337 --window-icon=/usr/share/biglinux/grub-restore/grub-icon.svg --text $"<span font='16' foreground='LightSkyBlue'>Select the desired option:</span>
+        zenity --list --title=$"Restore Boot, Grub and Initrd" --width=790 --height=337 --window-icon=/usr/share/manjaro/grub-restore/grub-icon.svg --text $"<span font='16' foreground='LightSkyBlue'>Select the desired option:</span>
         
 Restoration can be done in 3 ways (<span foreground='gray'>Simple, Intermediate or Complete</span>),if in doubt, try the first
 option, restart the computer and see if you resolved.
@@ -209,8 +209,8 @@ If the problem persists try the other options." \
     
         else
             #restore
-            sudo st -e /usr/share/biglinux/grub-restore/grub-apply-legacy
-            zenity --info --text $"Done!" --window-icon=/usr/share/biglinux/grub-restore/grub-icon.svg 
+            sudo st -e /usr/share/manjaro/grub-restore/grub-apply-legacy
+            zenity --info --text $"Done!" --window-icon=/usr/share/manjaro/grub-restore/grub-icon.svg 
         fi
     fi
 fi
@@ -236,7 +236,7 @@ then
 <span font='11' foreground='gray'>Partition format:</span> $PARTITION_FORMAT
 <span font='11' foreground='gray'>Partition UUID:</span> $UUID_PARTITION
 
-Do you want to proceed?" --width=300 --height=100 --title=$"Restore Boot, Grub and Initrd"  --window-icon=/usr/share/biglinux/grub-restore/grub-icon.svg --icon-name='drive-harddisk' --no-wrap  
+Do you want to proceed?" --width=300 --height=100 --title=$"Restore Boot, Grub and Initrd"  --window-icon=/usr/share/manjaro/grub-restore/grub-icon.svg --icon-name='drive-harddisk' --no-wrap  
 
     if [ "$?" = "1" ];
     then
@@ -244,12 +244,12 @@ Do you want to proceed?" --width=300 --height=100 --title=$"Restore Boot, Grub a
     else
         net=$(ping -c 1 8.8.8.8 | cut -d " " -f 1 | grep 64)
         if [ "$net" != "64" ]; then
-            zenity --info --text $"Your computer is not connected to the internet, options 2 and 3 need internet to work." --width=300 --height=25 --icon-name='network-offline' --window-icon=/usr/share/biglinux/grub-restore/grub-icon.svg
+            zenity --info --text $"Your computer is not connected to the internet, options 2 and 3 need internet to work." --width=300 --height=25 --icon-name='network-offline' --window-icon=/usr/share/manjaro/grub-restore/grub-icon.svg
         fi
         rm -f /tmp/grub-restore-apply-mode
 
         
-        zenity --list --title=$"Restore Boot, Grub and Initrd" --width=790 --height=337 --window-icon=/usr/share/biglinux/grub-restore/grub-icon.svg --text $"<span font='16' foreground='LightSkyBlue'>Select the desired option:</span>
+        zenity --list --title=$"Restore Boot, Grub and Initrd" --width=790 --height=337 --window-icon=/usr/share/manjaro/grub-restore/grub-icon.svg --text $"<span font='16' foreground='LightSkyBlue'>Select the desired option:</span>
         
 Restoration can be done in 3 ways(<span foreground='gray'>Simple, Intermediate or Complete</span>), if in doubt, try the first
 option, restart the computer and see if you resolved.
@@ -270,8 +270,8 @@ If the problem persists try the other options." \
     
         else
             #restore
-            sudo st -e /usr/share/biglinux/grub-restore/grub-apply-efi
-            zenity --info --text $"Done!" --window-icon=/usr/share/biglinux/grub-restore/grub-icon.svg 
+            sudo st -e /usr/share/manjaro/grub-restore/grub-apply-efi
+            zenity --info --text $"Done!" --window-icon=/usr/share/manjaro/grub-restore/grub-icon.svg 
         fi
     fi
 fi
