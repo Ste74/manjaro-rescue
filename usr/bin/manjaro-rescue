@@ -156,7 +156,7 @@ then
     if [ "$(wc -l < /tmp/grub-disks)" -gt "1" ];
     then
     
-    zenity --list --title=$"Restore Boot, Grub, Initrd and others stuff" --width=790 --height=337 --window-icon=/usr/share/manjaro/grub-restore/grub-icon.svg --text $"<span font='16' foreground='LightSkyBlue'>Select an option:</span>
+    zenity --list --title=$"Restore Boot, Grub, Initrd and others stuff" --width=910 --height=400 --window-icon=/usr/share/manjaro/grub-restore/grub-icon.svg --text $"<span font='16' foreground='LightSkyBlue'>Select an option:</span>
     
 I found more than one storage device, select which one should record the boot:" --column=$"Disk" --column=$"Size" --column=$"Name" --column=$"Partition table" $(cat /tmp/grub-disks) > /tmp/grub-disks-selected
     else
@@ -198,7 +198,7 @@ Do you want to proceed?" --width=300 --height=100 --title=$"Restore Boot, Grub, 
             zenity --info --text $"Your computer is not connected to the internet, options 2 and 3 need internet to work." --width=300 --height=25 --icon-name='network-offline' --window-icon=/usr/share/manjaro/grub-restore/grub-icon.svg
         fi
         rm -f /tmp/grub-restore-apply-mode
-        zenity --list --title=$"Restore Boot, Grub, Initrd and others stuff" --width=790 --height=337 --window-icon=/usr/share/manjaro/grub-restore/grub-icon.svg --text $"<span font='16' foreground='LightSkyBlue'>Select the desired option:</span>
+        zenity --list --title=$"Restore Boot, Grub, Initrd and others stuff" --width=910 --height=400 --window-icon=/usr/share/manjaro/grub-restore/grub-icon.svg --text $"<span font='16' foreground='LightSkyBlue'>Select the desired option:</span>
         
 Restoration can be done in 3 ways (<span foreground='gray'>Simple, Intermediate or Complete</span>),if in doubt, try the first
 option, restart the computer and see if you resolved.
@@ -211,7 +211,7 @@ If the problem persists try the other options." \
 3 $"Complete, performs the stages of the intermediate restoration, updates the system and checks if the LTS kernel is installed." \
 4 $"Interactive, opens a terminal within the selected system." \
 5 $"Interactive, opens a TUI control center within the selected system." \
-6 $"Collect useful logs from installed system" \
+6 $"Collect useful logs from installed system." \
 7 $"Interactive, opens the package manager within the selected system." > /tmp/grub-restore-apply-mode
         if [ "$?" = "1" ];
         then
@@ -259,7 +259,7 @@ Do you want to proceed?" --width=300 --height=100 --title=$"Restore Boot, Grub, 
         rm -f /tmp/grub-restore-apply-mode
 
         
-        zenity --list --title=$"Restore Boot, Grub, Initrd and others stuff" --width=790 --height=337 --window-icon=/usr/share/manjaro/grub-restore/grub-icon.svg --text $"<span font='16' foreground='LightSkyBlue'>Select the desired option:</span>
+        zenity --list --title=$"Restore Boot, Grub, Initrd and others stuff" --width=910 --height=400 --window-icon=/usr/share/manjaro/grub-restore/grub-icon.svg --text $"<span font='16' foreground='LightSkyBlue'>Select the desired option:</span>
         
 Restoration can be done in 3 ways(<span foreground='gray'>Simple, Intermediate or Complete</span>), if in doubt, try the first
 option, restart the computer and see if you resolved.
@@ -272,7 +272,7 @@ If the problem persists try the other options." \
 3 $"Complete, performs the stages of the intermediate restoration, updates the system and checks if the LTS kernel is installed." \
 4 $"Interactive, opens a terminal within the selected system." \
 5 $"Interactive, opens a TUI control center within the selected system." \
-6 $"Collect useful logs from installed system" \
+6 $"Collect useful logs from installed system." \
 7 $"Interactive, opens the package manager within the selected system." > /tmp/grub-restore-apply-mode
         if [ "$?" = "1" ];
         then
