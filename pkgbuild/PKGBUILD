@@ -8,7 +8,7 @@ license=('GPL')
 url='https://gitlab.manjaro.org/ste74/manjaro-rescue'
 pkgdesc="Restore your installed system"
 depends=('zenity' 'mkinitcpio' 'grub' 'os-prober' 'pamac-cli' 'pacman' 'util-linux' 'manjaro-tools-base' 'st-manjaro'
-		'manjaro-log-helper')
+		'manjaro-log-helper' 'bmenu')
 makedepends=('git')
 source=("git+https://gitlab.manjaro.org/ste74/manjaro-rescue.git")
 md5sums=(SKIP)

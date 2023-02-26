@@ -1,12 +1,22 @@
 #!/bin/bash
 ##################################
+#  Author: Stefano Capitani <www.manjaro.org> <stefanoatmanjarodotorg>
+#  Original authors:
+#
 #  Author1: Bruno Goncalves (www.biglinux.com.br) 
 #  Author2: Rafael Ruscher (rruscher@gmail.com)  
 #  Date:    2022/08/19
 #  
 #  Description: Restore GRUB and installed system
 #  
-# Licensed by GPL V2 or greater
+#  This program is free software; you can redistribute it and/or modify
+#  it under the terms of the GNU General Public License as published by
+#  the Free Software Foundation; version 3 of the License.
+#
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU General Public License for more details.
 ##################################
 
 #Translation
@@ -109,7 +119,7 @@ PARTITION=EFI
     if [ "$(wc -l < /tmp/efi-partitions)" -gt "1" ];
     then
 
-zenity --list --title=$"Restore Boot, Grub and Initrd" --width=790 --height=337 --window-icon=/usr/share/manjaro/grub-restore/grub-icon.svg --text $"<span font='16' foreground='LightSkyBlue'>Select an option:</span>
+zenity --list --title=$"Restore Boot, Grub and Initrd" --width=910 --height=400 --window-icon=/usr/share/manjaro/grub-restore/grub-icon.svg --text $"<span font='16' foreground='LightSkyBlue'>Select an option:</span>
 
 I found more than one EFI partition, select which one should use:" --hide-header --column="" < /tmp/efi-partitions > /tmp/efi-selected
 
@@ -127,7 +137,7 @@ fi
 rm -f /tmp/os-prober-selected
 if [ "$(wc -l < /tmp/os-prober)" -gt "1" ];
 then
-zenity --list --title=$"Restore Boot, Grub and Initrd" --width=790 --height=337 --window-icon=/usr/share/manjaro/grub-restore/grub-icon.svg  --text $"<span font='16' foreground='LightSkyBlue'>Select an option:</span>
+zenity --list --title=$"Restore Boot, Grub and Initrd" --width=910 --height=400 --window-icon=/usr/share/manjaro/grub-restore/grub-icon.svg  --text $"<span font='16' foreground='LightSkyBlue'>Select an option:</span>
 
 I found more than one Linux installed on this computer, select which one should restore the boot:" --hide-header --column="" < /tmp/os-prober > /tmp/os-prober-selected
         if [ "$(cat /tmp/os-prober-selected)" = "" ];
