@@ -40,8 +40,8 @@ msgstr ""
 "\n"
 "\n"
 
-msgid "Restore Boot, Grub and Initrd"
-msgstr "Vrati pokretanje, grubo i initrd"
+msgid "Restore Boot, Grub, Initrd and others stuff"
+msgstr "Vratite Boot, Grub, Initrd i druge stvari"
 
 msgid "Wait..."
 msgstr "Čekati..."

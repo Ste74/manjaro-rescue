@@ -43,8 +43,8 @@ msgstr ""
 "\n"
 "Do you want to proceed?"
 
-msgid "Restore Boot, Grub and Initrd"
-msgstr "Restore Boot, Grub and Initrd"
+msgid "Restore Boot, Grub, Initrd and others stuff"
+msgstr "Restore Boot, Grub, Initrd and others stuff"
 
 msgid "Wait..."
 msgstr "Wait..."

@@ -41,8 +41,8 @@ msgstr ""
 "\n"
 "\n"
 
-msgid "Restore Boot, Grub and Initrd"
-msgstr "Възстановяване на Boot, Grub и Initrd"
+msgid "Restore Boot, Grub, Initrd and others stuff"
+msgstr "Възстановяване на Boot, Grub, Initrd и други неща"
 
 msgid "Wait..."
 msgstr "Изчакайте..."

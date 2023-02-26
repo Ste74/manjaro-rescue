@@ -39,8 +39,8 @@ msgstr ""
 "\n"
 "\n"
 
-msgid "Restore Boot, Grub and Initrd"
-msgstr "부팅, 그럽 및 초기화 복원"
+msgid "Restore Boot, Grub, Initrd and others stuff"
+msgstr "복원 부팅, Grub, Initrd 및 기타 물건"
 
 msgid "Wait..."
 msgstr "기다림..."

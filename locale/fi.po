@@ -40,8 +40,8 @@ msgstr ""
 "\n"
 "\n"
 
-msgid "Restore Boot, Grub and Initrd"
-msgstr "Palauta Boot, Grub ja Initrd"
+msgid "Restore Boot, Grub, Initrd and others stuff"
+msgstr "Palauta Boot, Grub, Initrd ja muut asiat"
 
 msgid "Wait..."
 msgstr "Odota..."

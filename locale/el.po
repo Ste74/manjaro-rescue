@@ -41,8 +41,8 @@ msgstr ""
 "\n"
 "\n"
 
-msgid "Restore Boot, Grub and Initrd"
-msgstr "Επαναφορά εκκίνησης, grub και ίντιτρντ"
+msgid "Restore Boot, Grub, Initrd and others stuff"
+msgstr "Επαναφορά εκκίνησης, Grub, Initrd και άλλα πράγματα"
 
 msgid "Wait..."
 msgstr "Περίμενε..."

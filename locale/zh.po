@@ -39,8 +39,8 @@ msgstr ""
 "\n"
 "是否要继续？"
 
-msgid "Restore Boot, Grub and Initrd"
-msgstr "恢复引导、蛴螬和初始化"
+msgid "Restore Boot, Grub, Initrd and others stuff"
+msgstr "恢复启动，Grub，Initrd和其他东西"
 
 msgid "Wait..."
 msgstr "等。。。"

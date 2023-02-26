@@ -41,8 +41,8 @@ msgstr ""
 "\n"
 "\n"
 
-msgid "Restore Boot, Grub and Initrd"
-msgstr "Restaurați Boot, Grub și Initrd"
+msgid "Restore Boot, Grub, Initrd and others stuff"
+msgstr "Restaurare Boot, Grub, Initrd și alte chestii"
 
 msgid "Wait..."
 msgstr "Aşteaptă..."

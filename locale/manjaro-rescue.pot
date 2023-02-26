@@ -30,7 +30,7 @@ msgid   "<span font='12'>This tool should be used in live mode and to restore "
         "Do you want to proceed?"
 msgstr  ""
 
-msgid   "Restore Boot, Grub and Initrd"
+msgid   "Restore Boot, Grub, Initrd and others stuff"
 msgstr  ""
 
 msgid   "Wait..."

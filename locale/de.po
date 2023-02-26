@@ -41,8 +41,8 @@ msgstr ""
 "\n"
 "\n"
 
-msgid "Restore Boot, Grub and Initrd"
-msgstr "Boot, grub und initrd wiederherstellen"
+msgid "Restore Boot, Grub, Initrd and others stuff"
+msgstr "Boot, Grub, Initrd und andere Dinge wiederherstellen"
 
 msgid "Wait..."
 msgstr "Warte..."

@@ -40,8 +40,8 @@ msgstr ""
 "\n"
 "\n"
 
-msgid "Restore Boot, Grub and Initrd"
-msgstr "שחזור אתחול, גראב ו- Initrd"
+msgid "Restore Boot, Grub, Initrd and others stuff"
+msgstr "שחזור Boot, Grub, Initrd ודברים אחרים"
 
 msgid "Wait..."
 msgstr "המתין..."

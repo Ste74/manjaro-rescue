@@ -40,8 +40,8 @@ msgstr ""
 "\n"
 "\n"
 
-msgid "Restore Boot, Grub and Initrd"
-msgstr "Obnovte boot, Grub a Initrd"
+msgid "Restore Boot, Grub, Initrd and others stuff"
+msgstr "Obnovte boot, Grub, Initrd a ďalšie veci"
 
 msgid "Wait..."
 msgstr "Čakať..."

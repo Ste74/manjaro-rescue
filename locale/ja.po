@@ -39,8 +39,8 @@ msgstr ""
 "\n"
 "続行しますか?"
 
-msgid "Restore Boot, Grub and Initrd"
-msgstr "ブート、グラブ、および初期化の復元"
+msgid "Restore Boot, Grub, Initrd and others stuff"
+msgstr "ブート、グラブ、Initrdなどのものを復元する"
 
 msgid "Wait..."
 msgstr "待つ。。。"
