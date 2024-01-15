@@ -212,7 +212,8 @@ If the problem persists try the other options." \
 4 $"Interactive, opens a terminal within the selected system." \
 5 $"Interactive, opens a TUI control center within the selected system." \
 6 $"Collect useful logs from installed system." \
-7 $"Interactive, opens the package manager within the selected system." > /tmp/grub-restore-apply-mode
+7 $"Interactive, opens the package manager within the selected system." \
+8 $"Restore System with Timeshift ( only if Timeshift is configurated )" > /tmp/grub-restore-apply-mode
         if [ "$?" = "1" ];
         then
             exit
@@ -273,7 +274,8 @@ If the problem persists try the other options." \
 4 $"Interactive, opens a terminal within the selected system." \
 5 $"Interactive, opens a TUI control center within the selected system." \
 6 $"Collect useful logs from installed system." \
-7 $"Interactive, opens the package manager within the selected system." > /tmp/grub-restore-apply-mode
+7 $"Interactive, opens the package manager within the selected system."
+8 $"Restore System with Timeshift ( only if Timeshift is configurated )" > /tmp/grub-restore-apply-mode
         if [ "$?" = "1" ];
         then
             exit

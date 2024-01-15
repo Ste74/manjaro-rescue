@@ -11,7 +11,7 @@ msgstr  "Project-Id-Version: manjaro-rescue\n"
         "Language-Team: LANGUAGE <LL@li.org>\n"
         "Language: \n"
         "MIME-Version: 1.0\n"
-        "Content-Type: text/plain; charset=CHARSET\n"
+        "Content-Type: text/plain; charset=UTF-8\n"
         "Content-Transfer-Encoding: 8bit\n"
 
 msgid   "This utility should only be used in live mode!"
@@ -161,10 +161,13 @@ msgstr  ""
 msgid   "Interactive, opens a TUI control center within the selected system."
 msgstr  ""
 
-msgid   "Collect useful logs from installed system"
+msgid   "Collect useful logs from installed system."
 msgstr  ""
 
 msgid   "Interactive, opens the package manager within the selected system."
+msgstr  ""
+
+msgid   "Restore System with Timeshift ( only if Timeshift is configurated )"
 msgstr  ""
 
 msgid   "Done!"
@@ -196,4 +199,7 @@ msgid   "<span font='16' foreground='LightSkyBlue'>Select the desired option:"
         "option, restart the computer and see if you resolved.\n"
         "\n"
         "If the problem persists try the other options."
+msgstr  ""
+
+msgid   "Timeshift not installed!"
 msgstr  ""

@@ -85,8 +85,20 @@ fi
 
 if [ "$(cat /tmp/grub-restore-apply-mode)" = "7" ];
 then
-    manjaro-chroot /mnt rm /var/lib/pacman/db.lck
-    manjaro-chroot /mnt pamac-manager
+    manjaro-chroot /mnt rm /var/lib/pacman/db.lck >/dev/null 2>&1
+    echo 'Running ...'
+    manjaro-chroot /mnt pamac-manager >/dev/null 2>&1
+    clear
+    echo 'Exiting ...'
+fi
+
+if [ "$(cat /tmp/grub-restore-apply-mode)" = "8" ];
+then
+    if [ $(command -v timeshift-gtk) ];
+        then manjaro-chroot /mnt timeshift-gtk >/dev/null 2>&1
+    else echo 'Exiting ...'
+        zenity --warning --text $"Timeshift not installed!"  --window-icon=/usr/share/manjaro/grub-restore/grub-icon.svg 
+    fi
 fi
 
 echo "sync disk"
